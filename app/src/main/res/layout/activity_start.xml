@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".start"
-    android:background="@drawable/bg">
+    android:background="@drawable/bg1">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
