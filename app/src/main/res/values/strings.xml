@@ -3,4 +3,7 @@
     <string name="Metron_title">Metron</string>
     <string name="todo">TODO</string>
     <string name="capture">capture</string>
+    <string name="addweights">Addweights</string>
+    <string name="back">Back</string>
+    <string name="addobject">addObject</string>
 </resources>

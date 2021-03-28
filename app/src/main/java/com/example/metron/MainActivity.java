@@ -16,6 +16,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     private ImageButton button;
     public static final int CAMERA_REQUEST=9999;
+    private ImageButton btn;
     ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +24,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = (ImageButton) findViewById(R.id.CameraOpen);
-//        img =(ImageView) findViewById(R.id.image1);
+
+        btn =(ImageButton) findViewById(R.id.ReferenceAddition);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openActivity2();
+            }
+        });
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openreferencepage();
             }
         });
     }
@@ -36,7 +45,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent,CAMERA_REQUEST);
     }
+
+    public void openreferencepage()
+    {
+        Intent intent= new Intent(this,page3.class);
+        startActivity(intent);
+    }
+
     @Override
+
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==CAMERA_REQUEST) {
