@@ -3,46 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#b4cbcb"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/Title"
-        android:layout_width="251dp"
-        android:layout_height="139dp"
+        android:layout_width="387dp"
+        android:layout_height="185dp"
+        android:fontFamily="@font/dancing_script"
         android:includeFontPadding="true"
         android:text="@string/Metron_title"
         android:textAlignment="center"
-        android:textSize="75sp"
+        android:textColor="#050607"
+        android:textSize="125sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57" />
+        app:layout_constraintVertical_bias="0.528" />
 
     <ImageButton
         android:id="@+id/ReferenceAddition"
-        android:layout_width="104dp"
+        android:layout_width="122dp"
         android:layout_height="60dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="104dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title"
-        app:layout_constraintVertical_bias="0.366"
-        app:srcCompat="@drawable/addreference"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.182"
+        app:srcCompat="@drawable/addreference" />
 
     <ImageButton
         android:id="@+id/CameraOpen"
         android:layout_width="122dp"
         android:layout_height="60dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="104dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toEndOf="@+id/ReferenceAddition"
         app:layout_constraintTop_toBottomOf="@+id/Title"
-        app:layout_constraintVertical_bias="0.706"
+        app:layout_constraintVertical_bias="0.182"
         app:srcCompat="@drawable/camera" />
 
     <ImageView
@@ -52,8 +57,10 @@
         android:contentDescription="logo"
         app:layout_constraintBottom_toTopOf="@+id/Title"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568"
         app:srcCompat="@drawable/metronlogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
