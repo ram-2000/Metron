@@ -42,8 +42,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public  void openActivity2()
     {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent,CAMERA_REQUEST);
+//        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//        startActivityForResult(intent,CAMERA_REQUEST);
+        Intent intent = new Intent (this,Page2.class);
+        startActivity (intent);
+
     }
 
     public void openreferencepage()
