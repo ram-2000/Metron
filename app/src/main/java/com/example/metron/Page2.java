@@ -1,5 +1,6 @@
 package com.example.metron;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -22,6 +23,8 @@ import androidx.lifecycle.LifecycleOwner;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import java.io.File;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 public class Page2 extends AppCompatActivity {
@@ -47,16 +50,21 @@ public class Page2 extends AppCompatActivity {
 }
 
     private void takePhoto() {
+        File file= new File (getExternalFilesDir(Environment.DIRECTORY_PICTURES)+ "/" + System.currentTimeMillis() + ".png");
         ImageCapture.OutputFileOptions outputFileOptions =
-                new ImageCapture.OutputFileOptions.Builder(new File (getExternalFilesDir(Environment.DIRECTORY_PICTURES)+ "/" + System.currentTimeMillis() + ".png")).build();
+                new ImageCapture.OutputFileOptions.Builder(file).build();
         imageCapture.takePicture(outputFileOptions, ContextCompat.getMainExecutor(this),
                 new ImageCapture.OnImageSavedCallback() {
                     @Override
                     public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
-                        // insert your code here.
-                        String msg="saved";
+                        String msg=file.getAbsolutePath ();
                         Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_SHORT).show();
-                        finish ();
+
+                        ArrayList<File> documents= new ArrayList<File> ();
+                        documents.add (file);
+                        Intent intent1 =new Intent (Page2.this,image.class);
+                        intent1.putExtra("documents", documents);
+                        startActivity (intent1);
                     }
                     @Override
                     public void onError(@NonNull ImageCaptureException error) {
