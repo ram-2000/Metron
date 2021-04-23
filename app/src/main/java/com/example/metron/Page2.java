@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -59,7 +60,7 @@ public class Page2 extends AppCompatActivity {
                     public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
                         String msg=file.getAbsolutePath ();
                         Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_SHORT).show();
-
+                        Log.d ("did_it_saved","Saved");
                         ArrayList<File> documents= new ArrayList<File> ();
                         documents.add (file);
                         Intent intent1 =new Intent (Page2.this,image.class);
