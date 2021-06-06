@@ -8,6 +8,13 @@ All thanks to Adrian Rosebrock (from [pyimagesearch](https://www.pyimagesearch.c
 great tutorials. This project is inspired from his blog: [Measuring size of objects in an image with OpenCV](https://www.pyimagesearch.com/2016/03/28/measuring-size-of-objects-in-an-image-with-opencv/). I have included the author's code and the one i wrote my self as well.
 Here camera is in fixed position i have used mobile camera to capture to image and entire backend processing is done in AWS Cloud.
 
+ ## **Tech Stack:**
+    1.Java      (for app development)
+    2.python    (for opencv/backend)
+    3.XML       (for frontend of the app)
+    4.AWS lambda(severless)
+    5.AWS S3    (for storage purpose)
+    
 
 ## **Key Points**
 1. Steps involved:
@@ -38,17 +45,11 @@ Here camera is in fixed position i have used mobile camera to capture to image a
  3.install the apk in your device.
  ```
 
- ## **Tech Stack:**
-    1.Java      (for app development)
-    2.python    (for opencv/backend)
-    3.XML       (for frontend of the app)
-    4.AWS lambda(severless)
-    5.AWS S3    (for storage purpose)
-
 ## **Results:**
 The results are pretty decent even though not perfect. This is due the limitations of the image itself as its not perfect top-down view of the objects and some calibrations could have also been done in the camera before clicking the picture.
 
 ![](metron.gif)
+![](result_01.jpg)
 
 
 ## **The limitations**
