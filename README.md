@@ -49,6 +49,9 @@ Here camera is in fixed position i have used mobile camera to capture to image a
 The results are pretty decent even though not perfect. This is due the limitations of the image itself as its not perfect top-down view of the objects and some calibrations could have also been done in the camera before clicking the picture.
 
 ![](metron.gif)
+
+Output Enlarged  :
+
 ![](result_01.jpg)
 
 
