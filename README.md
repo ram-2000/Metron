@@ -4,9 +4,7 @@
 
 Cool object size estimator with just OpenCV and python
 
-All thanks to Adrian Rosebrock (from [pyimagesearch](https://www.pyimagesearch.com/)) for making
-great tutorials. This project is inspired from his blog: [Measuring size of objects in an image with OpenCV](https://www.pyimagesearch.com/2016/03/28/measuring-size-of-objects-in-an-image-with-opencv/). I have included the author's code and the one i wrote my self as well.
-Here camera is in fixed position i have used mobile camera to capture to image and entire backend processing is done in AWS Cloud.
+I have used mobile camera to capture to image and entire backend processing is done in AWS Cloud.
 
  ## **Tech Stack:**
     1.Java      (for app development)
